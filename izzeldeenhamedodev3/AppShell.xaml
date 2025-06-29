@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="izzeldeenhamedodev3.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:izzeldeenhamedodev3"
+    Shell.FlyoutBehavior="Flyout"
+    Title="izzeldeenhamedodev3">
+
+    <Shell.FlyoutHeader>
+        <Grid Padding="20" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Source="ezzaldin.jpg"
+                WidthRequest="100"
+                HeightRequest="100"
+                Aspect="AspectFill"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+            <Label
+                Grid.Column="1"
+                Text="izzeldeen hamed"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                VerticalOptions="Center"
+                Margin="10,0,0,0" 
+                />
+        </Grid>
+    </Shell.FlyoutHeader>
+    
+    <ShellItem Title="KayitSayfasi" Icon="login.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </ShellItem>
+
+    <ShellItem Title="AnaSayfa" Icon="home.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:AnaSayfa}"
+            Route="AnaSayfa" />
+    </ShellItem>
+    <ShellItem Title="HavaDurumu" Icon="weather.png" >
+        <ShellContent
+            ContentTemplate="{DataTemplate local:HavaDurumu}"
+             Route="HavaDurumu" />
+        
+        </ShellItem>
+    <ShellItem Title="Ayarlar" Icon="settings.png">
+        <ShellContent
+     ContentTemplate="{DataTemplate local:Ayarlar}"
+     Route="Ayarlar" />
+    </ShellItem>
+    <ShellItem Title="DovizKurlari" Icon="money.png">
+        <ShellContent
+ContentTemplate="{DataTemplate local:DovizKurlari}"
+Route="DovizKurlari" />
+    </ShellItem>
+    <ShellItem Title="NotesPage" Icon="to_do_list.png">
+        <ShellContent
+ContentTemplate="{DataTemplate local:NotesPage}"
+Route="NotesPage" />
+    </ShellItem>
+    <ShellItem Title="Haberler" Icon="news.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:Haberler}"
+            Route="Haberler" />
+    </ShellItem>
+</Shell>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="izzeldeenhamedodev3.MainPage">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20" WidthRequest="300">
+
+
+        <Frame CornerRadius="15"  >
+            <StackLayout>
+
+                <StackLayout x:Name="loginEkran" Spacing="25" IsVisible="True" >
+                    <Label Text="Oturum Aç" FontSize="Large"/>
+
+                    <Entry x:Name="txtEmail"    Placeholder="Email"  Keyboard="Email"  />
+                    <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" />
+
+                    <Button Text="Oturum Aç" Clicked="LoginInClicked"/>
+                    <Button Text="Hesabım Yok" BackgroundColor="Gray" TextColor="black" FontSize="Medium" Clicked="KayitLoginEkraniGoster"/>
+
+                </StackLayout>
+
+                <StackLayout x:Name="kayitEkran" Spacing="25" IsVisible="False">
+                    <Label Text="Kaydol" FontSize="Large"/>
+
+                    <Entry x:Name="txtName"      Placeholder="Kullanıcı Adı"  Keyboard="Default" />
+                    <Entry x:Name="txtREmail"    Placeholder="Email"  Keyboard="Email" />
+                    <Entry x:Name="txtRPassword" Placeholder="Password" IsPassword="True" />
+
+                    <Button Text="Kaydol" Clicked="RegisterClicked"/>
+                    <Button Text="Zaten bir hesabım var" BackgroundColor="Transparent" TextColor="Grey" FontSize="Medium" Clicked="KayitLoginEkraniGoster"/>
+
+                </StackLayout>
+            </StackLayout>
+
+        </Frame>
+    </VerticalStackLayout>
+
+</ContentPage>

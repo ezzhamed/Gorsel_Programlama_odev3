@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="izzeldeenhamedodev3.DovizKurlari"
+             Title="DovizKurlari"
+              >
+    <Grid RowDefinitions="Auto,*,Auto" Margin="20">
+        <Label Grid.Row="0" Text="Güncel Döviz Kurları" TextColor="Gray" FontSize="Large" Margin="20" HorizontalOptions="Center"/>
+
+        <CollectionView Grid.Row="1" x:Name="dovizliste" Margin="20">
+            <CollectionView.Header>
+                <Grid ColumnDefinitions="*,*,Auto,*,Auto" Padding="5">
+                    <Label Grid.Column="0" Text="Adı" />
+                    <Label Grid.Column="1" Text="Alıs Fiyati" TextColor="Gray"/>
+                    <Label Grid.Column="2" Text="Satış Fiyati" TextColor="Gray"  />
+                    <Label Grid.Column="3" Text="Fark" TextColor="Gray" HorizontalOptions="Center" />
+                    <Label Grid.Column="4" Text="Yön" HorizontalOptions="End" />
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*,*,*,Auto" >
+                        <Label Text="{Binding Doviz}" Grid.Column="0" Margin="4" FontSize="12"/>
+                        <Label Text="{Binding Alis}" Grid.Column="1" Margin="4" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{Binding Satis}" Grid.Column="2" Margin="5" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{Binding Fark}" Grid.Column="3" Margin="2" FontSize="12" TextColor="Gray"/>
+                        <Image Source="{Binding Yon}" Grid.Column="4" HeightRequest="17" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Grid.Row="2" Text="Güncelle" Margin="20" Clicked="OnRefreshClicked" HorizontalOptions="Center" BackgroundColor="#936c6c"/>
+    </Grid>
+</ContentPage>

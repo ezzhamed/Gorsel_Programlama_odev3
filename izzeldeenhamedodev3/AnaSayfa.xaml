@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="izzeldeenhamedodev3.AnaSayfa"
+             Title="AnaSayfa"
+             >
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="ezzaldin.jpg"
+                HeightRequest="300"
+                WidthRequest="500"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="izzeldeen hamed"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Bartın Üniversitesi Bilgisayar Mühendisliği Bölümü"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+            <Label
+            Text="Görsel Programlama_odev3"
+            Style="{StaticResource SubHeadline}"
+            SemanticProperties.HeadingLevel="Level3"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
